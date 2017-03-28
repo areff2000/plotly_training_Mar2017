@@ -1,0 +1,130 @@
+<head>
+
+	<!-- //plot.ly -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<style>
+#myPlot {
+	width: 100%;
+	height: 85%;
+
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Which #AU regions are growing jobs?</h1>
+	<div id='myPlot'></div>
+    <!-- <button id='change_me'>CHANGE Me!</button> -->
+
+Data: see <a href="  https://doi.org/10.6084/m9.figshare.4056282.v6">https://doi.org/10.6084/m9.figshare.4056282.v6</a> <br>
+This page all CC-BY.
+     
+
+<!--  -->
+
+<script	type="text/javascript">
+
+var d3 = Plotly.d3;
+
+// my first plot
+
+
+
+var layout = {
+    title: '%Growth by Region (2002-2014)',
+    showlegend: true,
+    xaxis: {title: 'sa4 (Rollover for region name)', range: [98, 805]},
+    yaxis: {title: '% increase in jobs', range: [90, 125]}
+
+}
+
+
+
+var myPlot = d3.select('#myPlot').node();
+
+// var change_button = d3.select('#change_me');
+
+// change_button.on('click', function(){
+//     figure.data = [linear]
+//     //Plotly.newPlot(myPlot, figure)
+//     // refreshes figure with new data
+//     // Plotly.animate(myPlot, figure)
+//     // animates transition
+//     Plotly.animate(myPlot, figure, {
+//         // Total time before next animation
+//         frame: {duration:3000},
+
+//         // time of actual animation
+//         transition: {duration: 15000}
+//     }) 
+// })
+
+
+
+
+d3.csv('sa4_deltaHeadcountRaw_displaySA4names.csv', function(data){
+        console.log(data[0]["2006"]);
+        Plotly.newPlot(myPlot, [
+           
+
+       {
+                mode: 'markers',
+                name: '2006',
+                marker: {
+                    color: 'purple'
+                },
+                x: data.map(function(row){
+                    return row.sa4;
+                }),
+                y: data.map(function(row){
+                    return row["2006"];
+                }), 
+                text: data.map(function(row){
+                    return "2006 " + row["SA4_NAME_2011"] + " " + row["STATE_NAME_2011"]
+              }) } ,
+
+{
+                mode: 'markers',
+                name: '2010',
+                marker: { color: 'yellow'},
+                x: data.map(function(row){
+                    return row.sa4;
+                }),
+                y: data.map(function(row){
+                    return row["2010"];
+                }), 
+                text: data.map(function(row){
+                    return "2010 " + row["SA4_NAME_2011"] + " " + row["STATE_NAME_2011"]
+              }) } ,
+
+                {
+                mode: 'markers',
+                name: '2014',
+                x: data.map(function(row){
+                    return row.sa4;
+                }),
+                y: data.map(function(row){
+                    return row["2014"];
+                }), 
+                text: data.map(function(row){
+                    return "2014 " + row["SA4_NAME_2011"] + " " + row["STATE_NAME_2011"]
+              }) } 
+
+
+        ], layout
+             
+        ) //plotly.newPlot
+
+
+}) //function(data)
+
+</script>
+
+
+
+	</body> 
