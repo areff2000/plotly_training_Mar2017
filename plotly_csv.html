@@ -21,6 +21,17 @@
 	<div id='myPlot'></div>
     <!-- <button id='change_me'>CHANGE Me!</button> -->
 
+
+<br>
+<button id='yr2006'>2006</button>
+
+<button id='yr2010'>2010</button>
+
+<button id='yr2014'>2014</button>
+
+<button id='yrALL'>Show all</button>
+
+<p>Key: 100 - NSW, 200 - Vic, 300 - Qld, 400 - SA, 500 - WA, 600 - Tas, 700 - NT, 800 - ACT.</p>
 Data: see <a href="  https://doi.org/10.6084/m9.figshare.4056282.v6">https://doi.org/10.6084/m9.figshare.4056282.v6</a> <br>
 This page all CC-BY.
      
@@ -38,7 +49,7 @@ var d3 = Plotly.d3;
 var layout = {
     title: '%Growth by Region (2002-2014)',
     showlegend: true,
-    xaxis: {title: 'sa4 (Rollover for region name)', range: [98, 805]},
+    xaxis: {title: 'SA4 Region Code (Rollover for region name)', range: [98, 805]},
     yaxis: {title: '% increase in jobs', range: [90, 125]}
 
 }
@@ -74,7 +85,7 @@ d3.csv('sa4_deltaHeadcountRaw_displaySA4names.csv', function(data){
 
        {
                 mode: 'markers',
-                name: '2006',
+                name: '2002-2006',
                 marker: {
                     color: 'purple'
                 },
@@ -90,7 +101,7 @@ d3.csv('sa4_deltaHeadcountRaw_displaySA4names.csv', function(data){
 
 {
                 mode: 'markers',
-                name: '2010',
+                name: '2006-2010',
                 marker: { color: 'yellow'},
                 x: data.map(function(row){
                     return row.sa4;
@@ -104,7 +115,7 @@ d3.csv('sa4_deltaHeadcountRaw_displaySA4names.csv', function(data){
 
                 {
                 mode: 'markers',
-                name: '2014',
+                name: '2010-2014',
                 x: data.map(function(row){
                     return row.sa4;
                 }),
@@ -122,6 +133,110 @@ d3.csv('sa4_deltaHeadcountRaw_displaySA4names.csv', function(data){
 
 
 }) //function(data)
+
+
+var yr2006_button = d3.select('#yr2006');
+var yr2010_button = d3.select('#yr2010');
+var yr2014_button = d3.select('#yr2014');
+var yrALL_button = d3.select('#yrALL');
+
+yrALL_button.on('click', function(){
+    location.reload();
+})
+
+yr2006_button.on('click', function(){
+
+d3.csv('sa4_deltaHeadcountRaw_displaySA4names.csv', function(data){
+        // console.log(data[0]["2006"]);
+        Plotly.newPlot(myPlot, [
+           
+
+       {
+                mode: 'markers',
+                name: '2002-2006',
+                marker: {
+                    color: 'purple'
+                },
+                x: data.map(function(row){
+                    return row.sa4;
+                }),
+                y: data.map(function(row){
+                    return row["2006"];
+                }), 
+                text: data.map(function(row){
+                    return "2006 " + row["SA4_NAME_2011"] + " " + row["STATE_NAME_2011"]
+              }) } 
+
+], layout
+             
+        ) //plotly.newPlot
+
+
+}) //function(data)
+
+    }) // end click
+
+yr2010_button.on('click', function(){
+
+d3.csv('sa4_deltaHeadcountRaw_displaySA4names.csv', function(data){
+        // console.log(data[0]["2006"]);
+        Plotly.newPlot(myPlot, [
+           
+
+      {
+                mode: 'markers',
+                name: '2006-2010',
+                marker: { color: 'yellow'},
+                x: data.map(function(row){
+                    return row.sa4;
+                }),
+                y: data.map(function(row){
+                    return row["2010"];
+                }), 
+                text: data.map(function(row){
+                    return "2010 " + row["SA4_NAME_2011"] + " " + row["STATE_NAME_2011"]
+              }) } 
+
+], layout
+             
+        ) //plotly.newPlot
+
+
+}) //function(data)
+
+    }) // end click
+
+yr2014_button.on('click', function(){
+
+d3.csv('sa4_deltaHeadcountRaw_displaySA4names.csv', function(data){
+        // console.log(data[0]["2006"]);
+        Plotly.newPlot(myPlot, [
+           
+
+      {
+                mode: 'markers',
+                name: '2010-2014',
+                x: data.map(function(row){
+                    return row.sa4;
+                }),
+                y: data.map(function(row){
+                    return row["2014"];
+                }), 
+                text: data.map(function(row){
+                    return "2014 " + row["SA4_NAME_2011"] + " " + row["STATE_NAME_2011"]
+              }) } 
+
+], layout
+             
+        ) //plotly.newPlot
+
+
+}) //function(data)
+
+    }) // end click
+
+
+
 
 </script>
 
