@@ -1,0 +1,75 @@
+<head>
+               <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+
+
+<div id="myDiv" style="width:900px;height:600px;"></div>
+
+
+
+
+
+
+
+<script>
+
+ var layout = {
+ 	title: 'ULED Hisense RRP and advertised prices 2016 - 17',
+ 	xaxis: {title: 'size (inches)'},
+ 	yaxis: {title: 'price', range: [0, 4000]}
+ 	
+ 	}
+
+ 
+ 
+ 
+var n7 = {
+  x: [50, 55, 65],
+  y: [1700, 2500, 3500],
+  type: 'scatter',
+  name:  'RRP - n7'
+};
+
+var n8 = {
+  x: [55, 65],
+  y: [3000, 4000],
+  type: 'scatter',
+    name:  'RRP - n8'
+};
+
+var m7000 = {
+  x: [50, 55, 65],
+  y: [1500, 2000, 3500],
+  type: 'scatter',
+    name:  'RRP - m7000'
+};
+
+var n6 = {
+  x: [50, 55, 65],
+  y: [1200, 1700, 3000 ],
+  type: 'scatter',
+    name:  'RRP - n6'
+};
+
+var jbn7 = {
+  x: [55, 65],
+  y: [2000, 3200 ],
+  type: 'scatter',
+    name:  'jbn7'
+};
+
+var jbn6 = {
+  x: [50, 55, 65],
+  y: [1200, 1600, 2500 ],
+  type: 'scatter',
+    name:  'jbn6'
+};
+
+
+var data = [n7, n8, m7000, n6, jbn7, jbn6];
+
+Plotly.newPlot('myDiv', data, layout);
+
+</script>
+
