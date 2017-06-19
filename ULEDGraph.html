@@ -6,6 +6,8 @@
 
 <div id="myDiv" style="width:900px;height:600px;"></div>
 
+<div id="myDiv2" style="width:900px;height:600px;"></div>
+
 
 
 
@@ -15,13 +17,19 @@
 <script>
 
  var layout = {
- 	title: 'ULED Hisense RRP and advertised prices 2016 - 17',
+ 	title: 'ULED Hisense RRP, Series 6 advertised prices 2017',
  	xaxis: {title: 'size (inches)'},
  	yaxis: {title: 'price', range: [0, 4000]}
  	
  	}
 
- 
+ var layout2 = {
+ 	title: 'ULED Hisense RRP,  Series 7 advertised prices 2017',
+ 	xaxis: {title: 'size (inches)'},
+ 	yaxis: {title: 'price', range: [0, 4000]}
+ 	
+ 	}
+
  
  
 var n7 = {
@@ -53,23 +61,71 @@ var n6 = {
 };
 
 var jbn7 = {
-  x: [55, 65],
-  y: [2000, 3200 ],
+  x: [55, 65, 65],
+  y: [2000, 3000, 3200 ],
   type: 'scatter',
-    name:  'jbn7'
+    name:  'jb - n7'
 };
 
 var jbn6 = {
   x: [50, 55, 65],
   y: [1200, 1600, 2500 ],
   type: 'scatter',
-    name:  'jbn6'
+    name:  'jb - n6'
 };
 
+var hnn7 = {
+  x: [55, 65],
+  y: [2000, 3000 ],
+  type: 'scatter',
+    name:  'hnn7'
+}; // no diff from JB
 
-var data = [n7, n8, m7000, n6, jbn7, jbn6];
+var hnn6 = {
+  x: [50, 55, 65],
+  y: [1200, 1600, 2500 ],
+  type: 'scatter',
+    name:  'hnn6'
+}; // no diff from JB
 
-Plotly.newPlot('myDiv', data, layout);
+var bln7 = {
+  x: [55, 65],
+  y: [1600, 3000 ],
+  type: 'scatter',
+    name:  'bl - n7'
+};
+
+var bln6 = {
+  x: [50, 55, 65],
+  y: [1000, 1400, 2500 ],
+  type: 'scatter',
+    name:  'bl - n6'
+};
+
+var ggn6 = {
+  x: [50],
+  y: [1200 ],
+  type: 'scatter',
+    name:  'gg - n6'
+}; // same as JB
+
+var ggm7000 = {
+  x: [50],
+  y: [800 ],
+  type: 'scatter',
+    name:  'gg - m7000'
+}; 
+
+var data6 = [ n8, n7, n6, jbn6, bln6];
+var data7 = [n8 ,n7 , n6, jbn7, bln7];
+var data = [n7, n8, n6, jbn7, jbn6, bln6, bln7];
+
+
+
+Plotly.newPlot('myDiv', data6, layout);
+
+Plotly.newPlot('myDiv2', data7, layout2);
+
 
 </script>
 
