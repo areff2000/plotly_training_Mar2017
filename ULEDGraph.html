@@ -8,9 +8,20 @@
 
 <div id="myDiv2" style="width:900px;height:600px;"></div>
 
+<div id="m7000" style="width:900px;height:600px;"></div>
+
 <p>Data at June '17. <br>
-Data Sources: see Source Code.
-</p>
+Data Sources: see Source Code.</p>
+
+<p>Data Sources: Hisense UHDs, 50" - 65" 2017 models.<br>
+<ul>
+<li> RRP: <a href="https://hisense.com.au/electronics/tv/all/">here</a>
+<li> BL: <a href="https://www.binglee.com.au/tech/tv-video/4k-ultra-high-definition?manufacturer=hisense">here</a>
+<li> HN: <a href="http://www.harveynorman.com.au/tv-blu-ray-home-theatre/tvs/tvs/hisense/993">here</a>
+<li> GG: <a href="https://www.thegoodguys.com.au/televisions/ultra-hd-tvs (Brand = Hisense)">here</a>
+<li> JB: <a href="https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3AHISENSE%3B&mf=brand&fm=false">here</a>
+<li> see also discussion at Whirlpool: <a href="https://forums.whirlpool.net.au/archive/2608487">here</a>
+</ul></p>
 
 
 
@@ -41,6 +52,12 @@ Data Sources: see Source Code.
  	
  	}
 
+var layout3 = {
+ 	title: 'ULED Hisense RRP, M7000 advertised prices 2016/17',
+ 	xaxis: {title: 'size (inches)'},
+ 	yaxis: {title: 'price', range: [0, 4000]}
+ 	
+ 	}
  
  
 var n7 = {
@@ -120,22 +137,47 @@ var ggn6 = {
     name:  'gg - n6'
 }; // same as JB
 
-var ggm7000 = {
-  x: [50],
-  y: [800 ],
+var ggm7000_50 = {
+  x: [50, 50, 50],
+  y: [800, 1000, 1100 ],
   type: 'scatter',
     name:  'gg - m7000'
 }; 
 
+var ggm7000_55 = {
+  x: [55, 55, 55],
+  y: [1250, 1300, 1400 ],
+  type: 'scatter',
+    name:  'gg - m7000'
+}; 
+
+var ggm7000_65 = {
+  x: [65 ],
+  y: [1600 ],
+  type: 'scatter',
+    name:  'gg - m7000'
+}; 
+
+var blm7000 = {
+  x: [55, 55],
+  y: [1040, 1250 ],
+  type: 'scatter',
+    name:  'bl - m7000'
+}; 
+
+
 var data6 = [ n8, n7, n6, jbn6, bln6];
 var data7 = [n8 ,n7 , n6, jbn7, bln7];
 var data = [n7, n8, n6, jbn7, jbn6, bln6, bln7];
+var data7000 = [m7000, ggm7000_50, ggm7000_55, ggm7000_65, blm7000];
 
 
 
 Plotly.newPlot('myDiv', data6, layout);
 
 Plotly.newPlot('myDiv2', data7, layout2);
+
+Plotly.newPlot('m7000', data7000, layout3);
 
 
 </script>
