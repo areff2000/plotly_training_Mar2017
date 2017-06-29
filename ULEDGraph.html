@@ -18,7 +18,7 @@ Data Sources: see Source Code.</p>
 <li> RRP: <a href="https://hisense.com.au/electronics/tv/all/">here</a>
 <li> BL: <a href="https://www.binglee.com.au/tech/tv-video/4k-ultra-high-definition?manufacturer=hisense">here</a>
 <li> HN: <a href="http://www.harveynorman.com.au/tv-blu-ray-home-theatre/tvs/tvs/hisense/993">here</a> - same as JB
-<li> GG: <a href="https://www.thegoodguys.com.au/televisions/ultra-hd-tvs (Brand = Hisense)">here</a>
+<li> GG: <a href="https://www.thegoodguys.com.au/televisions/ultra-hd-tvs">here</a>
 <li> JB: <a href="https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3AHISENSE%3B&mf=brand&fm=false">here</a> end of June '17 sales - 15% off
 <li> see also discussion at Whirlpool: <a href="https://forums.whirlpool.net.au/archive/2608487">here</a>
 </ul></p>
@@ -37,25 +37,26 @@ Data Sources: see Source Code.</p>
 // JB: https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3AHISENSE%3B&mf=brand&fm=false
 // see also discussion at: https://forums.whirlpool.net.au/archive/2608487
 // more discussion at: https://forums.whirlpool.net.au/archive/2640713
+// Whirlpool ULED 2017: https://forums.whirlpool.net.au/forum-replies.cfm?t=2608487
 
 
  var layout = {
  	title: 'ULED Hisense RRP, Series 6 advertised prices 2017',
- 	xaxis: {title: 'size (inches)'},
+ 	xaxis: {title: 'size (inches)', range:[0,70]},
  	yaxis: {title: 'price', range: [0, 4000]}
  	
  	}
 
  var layout2 = {
  	title: 'ULED Hisense RRP,  Series 7 advertised prices 2017',
- 	xaxis: {title: 'size (inches)'},
+ 	xaxis: {title: 'size (inches)', range:[0,70]},
  	yaxis: {title: 'price', range: [0, 4000]}
  	
  	}
 
 var layout3 = {
  	title: 'ULED Hisense RRP, M7000 advertised prices 2016/17',
- 	xaxis: {title: 'size (inches)'},
+ 	xaxis: {title: 'size (inches)', range:[0,70]},
  	yaxis: {title: 'price', range: [0, 4000]}
  	
  	}
@@ -113,8 +114,8 @@ var hnn7 = {
 }; // no diff from JB
 
 var hnn6 = {
-  x: [50, 50, 55, 55, 65, 65],
-  y: [930, 1200, 1400, 1600, 2100, 2500 ],
+  x: [50, 50, 50, 55, 55, 65, 65],
+  y: [930, 1000, 1200, 1360, 1600, 2100, 2500 ],
   type: 'scatter',
     name:  'hnn6'
 }; // no diff from JB
@@ -127,15 +128,22 @@ var bln7 = {
 };
 
 var bln6 = {
-  x: [50, 55, 55, 65, 65],
-  y: [1000, 1300, 1400, 2100, 2500 ],
+  x: [50, 50, 55, 55, 65, 65],
+  y: [900, 1000, 1300, 1400, 2100, 2500 ],
   type: 'scatter',
     name:  'bl - n6'
 };
 
 var ggn6 = {
-  x: [50],
-  y: [1200 ],
+  x: [50, 55, 65],
+  y: [1200, 1600, 2300 ],
+  type: 'scatter',
+    name:  'gg - n6'
+}; // same as JB
+
+var ggn7 = {
+  x: [ 55, 65],
+  y: [ 2000, 3000 ],
   type: 'scatter',
     name:  'gg - n6'
 }; // same as JB
@@ -169,16 +177,16 @@ var blm7000 = {
 }; 
 
 
-var data6 = [ n8, n7, n6, jbn6, bln6];
-var data7 = [n8 ,n7 , n6, jbn7, bln7];
+var data6 = [ n8, n7, n6, jbn6, bln6, ggn6];
+var data7 = [n8 ,n7 , n6, jbn7, bln7, ggn7];
 var data = [n7, n8, n6, jbn7, jbn6, bln6, bln7];
 var data7000 = [m7000, ggm7000_50, ggm7000_55, ggm7000_65, blm7000];
 
 
 
-Plotly.newPlot('myDiv', data6, layout);
+Plotly.newPlot('myDiv', data7, layout2);
 
-Plotly.newPlot('myDiv2', data7, layout2);
+Plotly.newPlot('myDiv2', data6, layout);
 
 Plotly.newPlot('m7000', data7000, layout3);
 
