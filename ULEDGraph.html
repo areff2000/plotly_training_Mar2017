@@ -15,7 +15,7 @@ Data Sources: see Source Code.</p>
 
 <p>Data Sources: Hisense UHDs, 50" - 65" 2017 models.<br>
 <ul>
-<li> RRP: <a href="https://hisense.com.au/electronics/tv/all/">here</a>
+<li> RRP: <a href="https://hisense.com.au/electronics/tv/all/">here</a> | N8 expected at $4k debuts at $5k RRP.
 <li> BL: <a href="https://www.binglee.com.au/tech/tv-video/4k-ultra-high-definition?manufacturer=hisense">here</a>
 <li> HN: <a href="http://www.harveynorman.com.au/tv-blu-ray-home-theatre/tvs/tvs/hisense/993">here</a> - same as JB
 <li> GG: <a href="https://www.thegoodguys.com.au/televisions/ultra-hd-tvs">here</a>
@@ -41,23 +41,23 @@ Data Sources: see Source Code.</p>
 
 
  var layout = {
- 	title: 'ULED Hisense RRP, Series 6 advertised prices 2017',
+ 	title: 'ULED Hisense RRP, Series 6 (N6) advertised prices 2017',
  	xaxis: {title: 'size (inches)', range:[0,70]},
- 	yaxis: {title: 'price', range: [0, 4000]}
+ 	yaxis: {title: 'price', range: [0, 5000]}
  	
  	}
 
  var layout2 = {
- 	title: 'ULED Hisense RRP,  Series 7 advertised prices 2017',
+ 	title: 'ULED Hisense RRP,  Series 7 (N7) advertised prices 2017',
  	xaxis: {title: 'size (inches)', range:[0,70]},
- 	yaxis: {title: 'price', range: [0, 4000]}
+ 	yaxis: {title: 'price', range: [0, 5000]}
  	
  	}
 
 var layout3 = {
  	title: 'ULED Hisense RRP, M7000 advertised prices 2016/17',
  	xaxis: {title: 'size (inches)', range:[0,70]},
- 	yaxis: {title: 'price', range: [0, 4000]}
+ 	yaxis: {title: 'price', range: [0, 5000]}
  	
  	}
  
@@ -70,8 +70,8 @@ var n7 = {
 };
 
 var n8 = {
-  x: [55, 65],
-  y: [3000, 4000],
+  x: [55, 65, 65],
+  y: [3000, 4000, 5000],
   type: 'scatter',
     name:  'RRP - n8'
 };
@@ -91,61 +91,61 @@ var n6 = {
 };
 
 var jbn7 = {
-  x: [55, 55, 65, 65, 65],
-  y: [1700, 2000, 2550, 3000, 3200 ],
+  x: [50, 50, 55, 55, 65, 65, 65, 65],
+  y: [1300, 1400, 1700, 2000, 2550, 2800, 3000, 3200 ],
   type: 'scatter',
     name:  'jb - n7'
 };
 // end of June '17 sales - 15% off
 
 var jbn6 = {
-  x: [50, 50, 55, 55, 65, 65],
-  y: [930, 1200, 1360, 1600, 2100, 2500 ],
+  x: [50, 50, 50, 55, 55, 55, 55, 65, 65, 65],
+  y: [930, 1100, 1200, 1360, 1400, 1600, 1700, 2000, 2100, 2500 ],
   type: 'scatter',
     name:  'jb - n6'
 };
 // end of June '17 sales - 15% off
 
 var hnn7 = {
-  x: [55, 55, 65, 65],
-  y: [1700, 2000, 2550, 3000 ],
+  x: [55, 55, 55, 65, 65, 65, 65],
+  y: [1600, 1700, 2000, 2300, 2400, 2550, 3000 ],
   type: 'scatter',
     name:  'hnn7'
 }; // no diff from JB
 
 var hnn6 = {
-  x: [50, 50, 50, 55, 55, 65, 65],
-  y: [930, 1000, 1200, 1360, 1600, 2100, 2500 ],
+  x: [50, 50, 50, 55, 55, 55, 65, 65, 65],
+  y: [930, 1000, 1200, 1275, 1360, 1600, 1835, 2100, 2500 ],
   type: 'scatter',
     name:  'hnn6'
 }; // no diff from JB
 
 var bln7 = {
-  x: [55, 65, 65],
-  y: [1600, 2500, 3000 ],
+  x: [55, 55, 65, 65, 65, 65],
+  y: [1600, 1700, 2400, 2500, 2800, 3000 ],
   type: 'scatter',
     name:  'bl - n7'
 };
 
 var bln6 = {
-  x: [50, 50, 55, 55, 65, 65],
-  y: [900, 1000, 1300, 1400, 2100, 2500 ],
+  x: [50, 50, 50, 50, 55, 55, 65, 65, 65, 65],
+  y: [900, 960, 1000, 1100, 1300, 1400, 1830, 2100, 2200, 2500 ],
   type: 'scatter',
     name:  'bl - n6'
 };
 
 var ggn6 = {
-  x: [50, 55, 65],
-  y: [1200, 1600, 2300 ],
+  x: [50, 50, 50, 55, 55, 65, 65],
+  y: [950, 1100, 1200, 1280, 1600, 1840, 2300 ],
   type: 'scatter',
     name:  'gg - n6'
 }; // same as JB
 
 var ggn7 = {
-  x: [ 55, 65],
-  y: [ 2000, 3000 ],
+  x: [ 55, 55, 55, 65, 65],
+  y: [ 1600, 1700, 2000, 2400, 3000 ],
   type: 'scatter',
-    name:  'gg - n6'
+    name:  'gg - n7'
 }; // same as JB
 
 var ggm7000_50 = {
