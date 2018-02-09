@@ -1,0 +1,161 @@
+<head>
+               <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<h1>2018 Sony x900F, x930E, x900E LEDs; Actual vs RRP</h1>
+
+<div id="myDiv" style="width:900px;height:600px;"></div>
+
+<!--
+<div id="myDiv2" style="width:900px;height:600px;"></div>
+-->
+
+<div id="x900E" style="width:900px;height:600px;"></div>
+
+<p>Data at Feb '18. <br>
+Data Sources: see Source Code.</p>
+
+<p>Data Sources: Sony LEDs, 49" - 65" 2018 models.<br>
+<ul>
+<li> RRP: <a href="http://www.sony.com.au/electronics/tv/t/televisions">here</a> **
+<li> BL: <a href="https://www.binglee.com.au/tech/tv-video/4k-ultra-high-definition?manufacturer=hisense">here</a>
+<li> HN: <a href="http://www.harveynorman.com.au/tv-blu-ray-home-theatre/tvs/tvs/hisense/993">here</a> - same as JB
+<li> GG: <a href="https://www.thegoodguys.com.au/sony/televisions/ultra-hd-tvs">here</a> **
+<li> JB: <a href="https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3ASONY%3B&mf=brand&fm=false">here</a> **
+<li> see also discussion at Whirlpool: <a href="https://forums.whirlpool.net.au/archive/2608487">here</a>
+<li>Other notes - add here. <a href="ULEDGraphNov17.html">Hisense</a>
+</ul></p>
+
+<P>In order of preference: 
+Sony X9000E |
+Samsung MU7000 |
+Sony X8500E |
+Samsung MU6400 |
+Hisense N7<br>29.10.17 
+http://whrl.pl/Re1yBj</p>
+
+
+
+<script>
+// Data Sources: Sony LEDs, 50" - 65" 2018 models.
+
+ var layout = {
+ 	title: 'LED Sony RRP, X930E (93E) advertised prices 2018',
+ 	xaxis: {title: 'size (inches)', range:[0,70]},
+ 	yaxis: {title: 'price', range: [0, 6000]}
+ 	
+ 	}
+
+ var layout2 = {
+ 	title: 'LED Sony RRP,  X900F (9F) advertised prices 2018',
+ 	xaxis: {title: 'size (inches)', range:[0,70]},
+ 	yaxis: {title: 'price', range: [0, 6000]}
+ 	
+ 	}
+
+var layout3 = {
+ 	title: 'LED Sony RRP, x900E, X930E advertised prices 2017/18',
+ 	xaxis: {title: 'size (inches)', range:[0,70]},
+ 	yaxis: {title: 'price', range: [0, 6000]}
+ 	
+ 	}
+ 
+ 
+var x900f = {
+  x: [55, 55, 65, 65],
+  y: [3500, 4000, 5000, 5300],
+  type: 'scatter',
+    name:  'RRP - x900F'
+};
+
+var n7 = {
+  x: [50, 55, 65],
+  y: [1700, 2500, 3500],
+  type: 'scatter',
+  name:  'RRP - Hisense n7'
+};
+
+var x930e = {
+  x: [55, 65],
+  y: [4000, 5300],
+  type: 'scatter',
+    name:  'RRP - x930E'
+};
+
+var x900e = {
+  x: [49, 55, 65],
+  y: [2500, 3000, 4500],
+  type: 'scatter',
+    name:  'RRP - x900e'
+};
+
+
+
+var jbn7 = {
+  x: [50, 50, 50, 50, 50, 55, 55, 55, 55, 55, 55, 55, 65, 65, 65, 65, 65, 65, 65],
+  y: [800, 1000, 1200, 1300, 1400, 1050, 1300, 1350, 1400, 1500, 1700, 2000, 1600, 2100, 2300, 2500, 2800, 3000, 3200 ],
+  type: 'scatter',
+    name:  'jb - n7'
+};
+// end of June '17 sales - 15% off
+// early Aug $200 off 55N6, 55N7  
+
+
+
+
+
+
+
+var ggx930e = {
+  x: [ 65 ],
+  y: [ 3500 ],
+  type: 'scatter',
+    name:  'gg - x930e'
+}; 
+// same for JB Hifi
+
+var ggx900e = {
+  x: [55 ],
+  y: [2000 ],
+  type: 'scatter',
+    name:  'gg - x900e'
+}; 
+
+var blx900e = {
+  x: [55, 65],
+  y: [2000, 3100 ],
+  type: 'scatter',
+    name:  'bl - x900e'
+}; 
+// same for JB Hifi
+
+var sonyx900e = {
+  x: [55],
+  y: [1350 ],
+  type: 'scatter',
+    name:  'sony2nd - x900e'
+}; 
+
+var sonyx930e = {
+  x: [55],
+  y: [1800 ],
+  type: 'scatter',
+    name:  'sony clearance - x930e'
+}; 
+
+// var data6 = [x900e, x930e, n7];
+var data7 = [x900f, x900e, x930e, n7, jbn7];
+var data = [n7, jbn7];
+var data900e = [x900e, x930e, ggx900e, ggx930e, sonyx900e, sonyx930e, blx900e, n7];
+
+
+
+Plotly.newPlot('myDiv', data7, layout2);
+
+// Plotly.newPlot('myDiv2', data6, layout);
+
+Plotly.newPlot('x900E', data900e, layout3);
+
+
+</script>
+
