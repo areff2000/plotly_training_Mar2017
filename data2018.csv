@@ -1,4 +1,4 @@
-store, date, model, size, price, URL
+store, date, brand, model, size, price, URL
 "JB", "15.2.18", "sony", "x900e", 65, 2500, "https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3ASONY%3B&mf=brand&fm=false"
 "JB", "15.2.18", "sony", "x900e", 65, 2800, "https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3ASONY%3B&mf=brand&fm=false"
 "JB", "15.2.18", "sony", "x900e", 55, 1600, "https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3ASONY%3B&mf=brand&fm=false"
