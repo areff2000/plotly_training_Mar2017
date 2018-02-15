@@ -6,12 +6,22 @@
 
 <div id="myDiv" style="width:900px;height:600px;"></div>
 
+<p><button id='hisense'>Hisense Off</button> 
+<button id='xALL'>Hisense On</button>
+</p>
 <!--
 <div id="myDiv2" style="width:900px;height:600px;"></div>
 -->
 
 <div id="x900E" style="width:900px;height:600px;"></div>
 
+
+<p>Select 2017/18 data:
+<button id='x900'>x900e</button>
+<button id='x930'>x930e</button>
+<button id='xALL'>all</button>
+
+</p>
 <p>Data at Feb '18. <br>
 
 Data Sources: Sony LEDs, 49" - 65" 2018 models.<br>
@@ -41,7 +51,7 @@ Source: http://whrl.pl/Re1yBj</p>
 </p>
 
 <p>
-Data: <br>
+Data: Will add 2018 to this <a href="csViewer.html">csv</a> (Online only.)<br>
 
 </p>
 <script>
@@ -179,18 +189,55 @@ var jbx930e = {
 // 15.2.18 https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3ASONY%3B&mf=brand&fm=false
 
 // var data6 = [x930e, x900e,  n7];
-var data7 = [  x930e, x900e, x900f, n7, jbn7 ];
+var data18 = [  x930e, x900e, x900f, n7, jbn7 ]; // 2018 plot
+var dataHisenseOff = [  x930e, x900e, x900f ]; // 2018 plot
+
 // var data = [n7, jbn7];
-var data900e = [x930e, x900e, vpx930e, jbx930e, sonyx930e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e];
+var data17 = [x930e, x900e, vpx930e, jbx930e, sonyx930e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e]; // 2017/18 plot
+
+var data900e = [x930e, x900e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e]; // 2017/18 plot
+
+var data930e = [x930e, x900e, vpx930e, jbx930e, sonyx930e]; // 2017/18 plot
 
 
+Plotly.newPlot('myDiv', data18, layout2);
 
-Plotly.newPlot('myDiv', data7, layout2);
+// Plotly.newPlot('myDiv2', data6, layout); RRP only
 
-// Plotly.newPlot('myDiv2', data6, layout);
+Plotly.newPlot('x900E', data17, layout3);
 
-Plotly.newPlot('x900E', data900e, layout3);
+// *** add button press code
+var d3 = Plotly.d3;
 
+var myPlot = d3.select('#x900E').node();
+
+var hisense_button = d3.select('#hisense');
+var x900e_button = d3.select('#x900');
+var x930e_button = d3.select('#x930');
+var xALL_button = d3.select('#xALL');
+
+xALL_button.on('click', function(){
+    location.reload();
+})
+
+
+x930e_button.on('click', function(){
+
+	Plotly.newPlot('x900E', data930e, layout3);
+
+	}) // end click
+
+x900e_button.on('click', function(){
+
+	Plotly.newPlot('x900E', data900e, layout3);
+
+	}) // end click
+
+hisense_button.on('click', function(){
+
+	Plotly.newPlot('myDiv', dataHisenseOff, layout2);
+
+	}) // end click
 
 </script>
 
