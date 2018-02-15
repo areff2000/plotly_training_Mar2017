@@ -31,8 +31,19 @@ Samsung MU6400 |
 Hisense N7<br>29.10.17 
 Source: http://whrl.pl/Re1yBj</p>
 
+<p> 2016 RRP Pricing: (per Whirlpool; ref to add)<br> 
+55X8500D - $2999 |
+65X8500D - $4499 |
+75X8500D - $7499  (same as X900E in 2017)<br>
 
+55X9300D - $3999 |
+65X9300D - $5999 (same as X930E in 2017)
+</p>
 
+<p>
+Data: <br>
+
+</p>
 <script>
 // Data Sources: Sony LEDs, 50" - 65" 2018 models.
 
@@ -62,7 +73,7 @@ var x900f = {
   x: [55, 55, 65, 65],
   y: [3500, 4000, 5000, 5300],
   type: 'scatter',
-    name:  'RRP - x900F'
+    name:  'RRP - x900F estd.'
 };
 
 var n7 = {
@@ -99,13 +110,14 @@ var jbn7 = {
 
 
 
-var ggx930e = {
-  x: [ 65 ],
-  y: [ 3500 ],
+var vpx930e = {
+  x: [ 55, 65 ],
+  y: [ 2500, 3500 ],
   type: 'scatter',
-    name:  'gg - x930e'
+    name:  'vp - x930e'
 }; 
 // same for JB Hifi
+// same for GG, only in 65"
 
 var hnx900e = {
   x: [ 65 ],
@@ -123,6 +135,15 @@ var ggx900e = {
     name:  'gg sale - x900e'
 }; 
 // https://www.ozbargain.com.au/node/349453
+
+var jbx900e = {
+  x: [ 55, 65 ],
+  y: [ 1600, 2500 ],
+  type: 'scatter',
+    name:  'jb sale - x900e'
+}; 
+// JB/BG sale 15.2.18, 3 days; 
+// BG/HN includes 10% gift card, to spend within sale period
 
 var blx900e = {
   x: [55, 65],
@@ -145,15 +166,22 @@ var sonyx930e = {
   x: [55],
   y: [1800 ],
   type: 'scatter',
-    name:  'sony clearance - x930e'
+    name:  'sony sale - x930e'
 }; 
 // https://www.ozbargain.com.au/node/360043 - Feb '18
 
+var jbx930e = {
+  x: [65],
+  y: [2800 ],
+  type: 'scatter',
+    name:  'jb sale - x930e'
+}
+// 15.2.18 https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3ASONY%3B&mf=brand&fm=false
 
-// var data6 = [x900e, x930e, n7];
-var data7 = [ x900e, x930e, n7, jbn7, x900f];
+// var data6 = [x930e, x900e,  n7];
+var data7 = [  x930e, x900e, x900f, n7, jbn7 ];
 // var data = [n7, jbn7];
-var data900e = [x900e, x930e, ggx930e, sonyx900e, hnx900e, ggx900e, sonyx930e, blx900e];
+var data900e = [x930e, x900e, vpx930e, sonyx900e, hnx900e, jbx930e, jbx900e, ggx900e, sonyx930e, blx900e];
 
 
 
