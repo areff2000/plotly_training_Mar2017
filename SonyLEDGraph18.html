@@ -4,7 +4,7 @@
 
 <h1>2018 Sony x900F, x930E, x900E LEDs; Actual vs RRP</h1>
 
-<div id="myDiv" style="width:900px;height:600px;"></div>
+<div id="x900F" style="width:900px;height:600px;"></div>
 
 <p><button id='hisense'>Hisense Off</button> 
 <button id='xALL'>Hisense On</button>
@@ -20,14 +20,15 @@
 <button id='x900'>x900e</button>
 <button id='x930'>x930e</button>
 <button id='xALL'>all</button>
+ | Time Series: <a target="_new" href="https://pricehipster.com/product/pxIhWMVWG1LLyCGvLHTVDg~B17Fi6TT~au">55x900</a> | <a target="_new" href="https://pricehipster.com/product/ZyZ6HLhFdCFT8THNGPSxrQ~B17Fi6TT~au">65x900</a> | Source:pricehipster.com
 
 </p>
 <p>Data at Feb '18. <br>
 
 Data Sources: Sony LEDs, 49" - 65" 2018 models.<br>
 <ul>
-<li><a href="http://www.staticice.com.au/cgi-bin/search.cgi?q=sony+x9000e&spos=3">x9000e</a> | HN, VP, BL, GG
-<li><a href="http://www.staticice.com.au/cgi-bin/search.cgi?q=sony+x9300e&spos=3">x9300e</a> | VP, GG
+<li><a href="http://www.staticice.com.au/cgi-bin/search.cgi?q=sony+x9000e&spos=3">x9000e</a> | HN, VP, BL, GG | Source: staticice.com.au
+<li><a href="http://www.staticice.com.au/cgi-bin/search.cgi?q=sony+x9300e&spos=3">x9300e</a> | VP, GG | Source: staticice.com.au
 <li> RRP: <a href="http://www.sony.com.au/electronics/tv/t/televisions">here</a> **
 <li> see also discussion at Whirlpool: <a href="http://forums.whirlpool.net.au/forum-replies.cfm?t=2695764">here</a>
 <li>Other notes - Sony.com.au sale x930E 55" $1,800 (Feb '18). <a href="ULEDGraphNov17.html">Hisense</a>
@@ -137,14 +138,16 @@ var hnx900e = {
 }; 
 // same for JB Hifi
 // https://www.ozbargain.com.au/node/349762
+// also https://www.ozbargain.com.au/node/361575 $2500 plus $50-100 post, plus 10% as gift cards
 
 var ggx900e = {
-  x: [ 55, 65 ],
-  y: [ 1500, 2500 ],
+  x: [ 55, 55, 65 ],
+  y: [  1500, 1600, 2500 ],
   type: 'scatter',
     name:  'gg sale - x900e'
 }; 
 // https://www.ozbargain.com.au/node/349453
+// Ebay 10% off sale - 16.2.18 - reduces $1600 to 1440, plus post $50 -> $1500
 
 var jbx900e = {
   x: [ 55, 65 ],
@@ -154,6 +157,22 @@ var jbx900e = {
 }; 
 // JB/BG sale 15.2.18, 3 days; 
 // BG/HN includes 10% gift card, to spend within sale period
+
+var napf900e = {
+  x: [  65 ],
+  y: [  2300 ],
+  type: 'scatter',
+    name:  'napf sale - x900e'
+}; 
+// 10% off ebay
+
+var napf930e = {
+  x: [  65 ],
+  y: [  2550 ],
+  type: 'scatter',
+    name:  'napf sale - x930e'
+}; 
+// 10% off ebay
 
 var blx900e = {
   x: [55, 65],
@@ -165,20 +184,21 @@ var blx900e = {
 // GG, same but only for 55"
 
 var sonyx900e = {
-  x: [49, 55],
-  y: [1200, 1350 ],
+  x: [49, 49, 55, 55, 65],
+  y: [1200, 1500, 1350, 1600, 2500 ],
   type: 'scatter',
     name:  'sony sale/2nd - x900e'
 }; 
 // 49" https://www.ozbargain.com.au/node/360043 - Feb '18
 
 var sonyx930e = {
-  x: [55],
-  y: [1800 ],
+  x: [55, 65],
+  y: [1800, 2800],
   type: 'scatter',
     name:  'sony sale - x930e'
 }; 
 // https://www.ozbargain.com.au/node/360043 - Feb '18
+// https://store.sony.com.au/sale - Feb '18
 
 var jbx930e = {
   x: [65],
@@ -188,21 +208,20 @@ var jbx930e = {
 }
 // 15.2.18 https://www.jbhifi.com.au/tv-home-entertainment/Ultra-HD-Televisions/?p=1&s=releaseDate&sd=2&fc=brand%3A%3ASONY%3B&mf=brand&fm=false
 
-// var data6 = [x930e, x900e,  n7];
+
 var data18 = [  x930e, x900e, x900f, n7, jbn7 ]; // 2018 plot
 var dataHisenseOff = [  x930e, x900e, x900f ]; // 2018 plot
 
-// var data = [n7, jbn7];
-var data17 = [x930e, x900e, vpx930e, jbx930e, sonyx930e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e]; // 2017/18 plot
+var data17 = [x930e, x900e, vpx930e, jbx930e, sonyx930e, napf930e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e, napf900e]; // 2017/18 plot - both x930e and x900e
 
-var data900e = [x930e, x900e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e]; // 2017/18 plot
+// subsets of data17 to allow view choice of x900e or x930e
+// if new datapoints added to data17, copy them here too.
+var data900e = [x930e, x900e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e, napf900e]; // 2017/18 plot
 
-var data930e = [x930e, x900e, vpx930e, jbx930e, sonyx930e]; // 2017/18 plot
+var data930e = [x930e, x900e, vpx930e, jbx930e, sonyx930e, napf930e]; // 2017/18 plot
 
 
-Plotly.newPlot('myDiv', data18, layout2);
-
-// Plotly.newPlot('myDiv2', data6, layout); RRP only
+Plotly.newPlot('x900F', data18, layout2);
 
 Plotly.newPlot('x900E', data17, layout3);
 
