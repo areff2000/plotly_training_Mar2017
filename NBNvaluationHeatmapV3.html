@@ -1,0 +1,265 @@
+<html>
+
+<head>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+<h1>NBN Valuations ($B) - for Joint Committee Inquiry into NBN Business Case</h1>
+<p>Datapoints: Impact at Yr 20, undiscounted to current $$; no interest or inflation included.<br>
+Each point is a datarun at: Observable Notebook <a href="https://beta.observablehq.com/@areff2000/nbn-financials-from-2021-on-v5a-verbose-off">v5a (Final)</a>, calculating the value of the NBN under different assumptions (scenarios).<br>
+These graphs visualise the model presented as a submission to the above <a href="https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/National_Broadband_Network">Inquiry</a> (30.3.2018).<br>
+These six graphs show 6 * 6 * 6 (216) scenarios of the model.<br>
+Blue indicates positive value. Red/Orange indicates negative or poor value.<br>
+Tool: Plot.ly. All code visible, if you select View Source.
+</p><p>
+<cite>Cite: Ferrers, R. What is the value of Australia's National Broadband Network (NBN) - 2021 - 2041? figshare. <br>Online at: <a href="https://doi.org/10.6084/m9.figshare.6030926">https://doi.org/10.6084/m9.figshare.6030926</a>.</cite>
+</p>
+
+
+
+<table><th>NBN Financial Value Projection ($B)</th><tr><td>
+<div id="myDiv1" style="width:600px;height:550px;"></div>
+<div id="myDiv2" style="width:600px;height:550px;"></div>
+<div id="myDiv3" style="width:600px;height:550px;"></div>
+</td>
+<td>
+<div id="myDiv1a" style="width:600px;height:550px;"></div>
+<div id="myDiv2a" style="width:600px;height:550px;"></div>
+<div id="myDiv3a" style="width:600px;height:550px;"></div>
+</td>
+</tr></table>
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+ 
+    
+z: [[-63, -37,-12, 14, 39, 65],
+      [-63, -35, -8, 19, 49, 74],
+       [-63, -33, -4, 25, 54, 83],
+       [-63, -32, -1, 30, 61, 92], 
+	[-63, -30, 3, 35, 68, 100], 
+	[-63, -28, 6, 42, 75, 109]
+],
+
+   
+  x: [0,20,40,60,80, 100],
+  y: [0,20,40,60, 80,100],
+  type: 'contour',
+  zmin: -60,
+    zmax: 100,
+    reversescale: true  
+  
+}];
+
+var layout = {
+  title: '%gigabit vs %NBN houses',
+  xaxis: {                  // all "layout.xaxis" attributes: #layout-xaxis
+        title: '% NBN households'         // more about "layout.xaxis.title": #layout-xaxis-title
+    },
+  yaxis: {
+        title: '% Gigabit Houses'
+        }      
+  
+};
+
+ 
+
+Plotly.newPlot('myDiv1', data, layout);
+//Plotly.newPlot('myDiv1a', data, layout);
+
+
+</script>
+
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+ z: [[-63, -37,-14, 7, 28, 49],
+      [-63, -35, -10, 13, 37, 64],
+       [-63, -33, -7, 19, 47, 78],
+       [-63, -30, -3, 25, 58, 92], 
+	[-63, -30, 0, 32, 69, 108], 
+	[-63, -28, 4, 40, 81, 123]
+],
+       
+ x: [0,20,40,60,80, 100],
+  y: [0,20,40,60, 80,100],
+  type: 'contour',
+  zmin: -60,
+   zmax: 100,
+    reversescale: true  
+  
+}];
+
+var layout2 = {
+  title: '%gigabit vs %NBN houses: 20% invest post FTTN',
+yaxis: {
+        title: '% Gigabit Houses'
+        }    , 
+xaxis: {
+        title: '% NBN households'
+        }     
+};
+
+//Plotly.newPlot('myDiv2', data, layout2);
+Plotly.newPlot('myDiv1a', data, layout2);
+
+</script>
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+ z: [[-64, -54,-44, -34, -24, -13],
+      [-63, -46, -27, -9, 9, 28],
+       [-63, -39, -17, 6, 29, 52],
+       [-63, -37, -12, 14, 39, 65], 
+	[-63, -37, -12, 14, 39, 65], 
+	[-60, -30, 1, 32, 63, 94]
+],
+       
+ x: [0,20,40,60,80, 100],
+  y: [0,20,40,60, 80,100],
+  type: 'contour',
+  zmin: -60,
+   zmax: 100,
+    reversescale: true  
+  
+}];
+
+var layout2 = {
+  title: 'CustomerSATisfaction vs %NBN houses',
+yaxis: {
+        title: '% Customer Satisfaction'
+        }    , 
+xaxis: {
+        title: '% NBN households'
+        }     
+};
+
+Plotly.newPlot('myDiv2', data, layout2);
+//Plotly.newPlot('myDiv2a', data, layout2);
+
+</script>
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+ z: [[-66, -53,-40, -27, -15, -3],
+      [-65, -43, -22, -3, 16, 36],
+       [-63, -36, -12, 12, 36, 64],
+       [-63, -33, -7, 19, 47, 78], 
+	[-63, -33, -6, 19, 49, 80], 
+	[-59, -24, 8, 43, 81, 120]
+],
+       
+ x: [0,20,40,60,80, 100],
+  y: [0,20,40,60, 80,100],
+  type: 'contour',
+  zmin: -60,
+   zmax: 100,
+    reversescale: true  
+  
+}];
+
+var layout2 = {
+  title: 'CSAT vs %NBN houses: 20% invest post FTTN, 40% gigabit uptake',
+yaxis: {
+        title: '% Customer Satisfaction'
+        }    , 
+xaxis: {
+        title: '% NBN households'
+        }     
+};
+
+//Plotly.newPlot('myDiv2', data, layout2);
+Plotly.newPlot('myDiv2a', data, layout2);
+
+</script>
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+ z: [[-63, -37,-10, 14, 39, 65],
+      [-63, -38, -13, 11, 36, 60],
+       [-63, -39, -15, 8, 32, 56],
+       [-63, -40, -17, 5, 28, 51], 
+	[-63, -41, -19, 2, 24, 46], 
+	[-63, -42, -21, -1, 20, 41]
+],
+       
+ x: [0,20,40,60,80, 100],
+  y: [0,20,40,60, 80,100],
+
+  type: 'contour',
+  zmin: -60,
+ zmax: 100,
+    reversescale: true  
+  
+}];
+
+var layout = {
+  title: '%FTTN abandoners vs %NBN Houses', 
+yaxis: {
+        title: '% FTTN abandoners at End of Life'
+        }  , 
+xaxis: { 
+		title: '% NBN households'
+		}
+};
+
+Plotly.newPlot('myDiv3', data, layout);
+//Plotly.newPlot('myDiv3a', data, layout);
+
+</script>
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+  
+     
+      z: [[-63, -38,-14, 13, 45, 82],
+      [-63, -37, -12, 15, 46, 81],
+       [-63, -36, -11, 16, 46, 81],
+       [-63, -35, -9, 17, 46, 80], 
+	[-63, -34, -8, 18, 47, 79], 
+	[-63, -33, -7, 19, 47, 78]
+],
+     
+       
+ x: [0,20,40,60,80, 100],
+  y: [0,20,40,60, 80,100],
+
+  type: 'contour',
+  zmin: -60,
+ zmax: 100,
+    reversescale: true  
+  
+}];
+
+var layout = {
+  title: '%FTTN abdn vs %NBN Houses: 20% invest post FTTN, 40% gbit use', 
+yaxis: {
+        title: '% FTTN abandoners at End of Life'
+        }  , 
+xaxis: { 
+		title: '% NBN households'
+		}
+};
+
+//Plotly.newPlot('myDiv3', data, layout);
+Plotly.newPlot('myDiv3a', data, layout);
+
+</script>
+
+
+
+</body>
+</html>
