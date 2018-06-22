@@ -13,3 +13,5 @@ store, date, brand, model, size, price, URL
 "Sony", "24.5.18", "sony", "x900f", 55, 2800, "https://www.sony.com.au/electronics/televisions/x9000f-series RRP"
 "GG", "16.6.18", "sony", "x900f", 55, 2100, "GG 20% off sale $2600; https://www.thegoodguys.com.au/sony-sale"
 "GG", "16.6.18", "sony", "x900f", 65, 3000, "GG 20% off sale $3800; https://www.thegoodguys.com.au/sony-sale"
+"Sony", "22.6.18", "sony", "x900f", 65, 3300, "https://store.sony.com.au/tvhometheatre-tv/KD65X9000F.html"
+"Sony", "22.6.18", "sony", "x900f", 55, 2600, "https://store.sony.com.au/tvhometheatre-tv-4khdrtv"
