@@ -15,3 +15,5 @@ store, date, brand, model, size, price, URL
 "GG", "16.6.18", "sony", "x900f", 65, 3000, "GG 20% off sale $3800; https://www.thegoodguys.com.au/sony-sale"
 "Sony", "22.6.18", "sony", "x900f", 65, 3300, "https://store.sony.com.au/tvhometheatre-tv/KD65X9000F.html"
 "Sony", "22.6.18", "sony", "x900f", 55, 2600, "https://store.sony.com.au/tvhometheatre-tv-4khdrtv"
+"VP", "25.6.18", "sony", "x900f", 65, 2900, "VP 2 day ebay 20% off sale $3600; https://www.ozbargain.com.au/node/386830"
+"VP", "25.6.18", "sony", "x900f", 55, 1950, "VP 2 day ebay 20% off sale $2400; https://www.ozbargain.com.au/node/386830"
