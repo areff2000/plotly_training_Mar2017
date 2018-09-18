@@ -54,3 +54,5 @@ store, date, brand, model, size, price, URL
 "Sony", "10.9.18", "sony", "x900f", 55, 2200, "https://store.sony.com.au/search?q=KD-x9000f"
 "VP", "11.9.18", "sony", "x900f", 55, 1800, "VP 20% off sale $2175 plus $55 post https://pages2.ebay.com.au/Buyer_coupons/pollen"
 "Sony", "14.9.18", "sony", "x900f", 55, 2000, "https://store.sony.com.au/search?q=KD-x9000f"
+"BL", "18.9.18", "sony", "x900f", 65, 2450, "BL 20% off sale $3000 plus $40 post;Sydney only inc. pickup; https://www.ozbargain.com.au/node/403775"
+"BL", "18.9.18", "sony", "x900f", 55, 1800, "BL 20% off sale $2200 plus $40 post;Sydney only inc. pickup;  https://www.ozbargain.com.au/node/403775"
