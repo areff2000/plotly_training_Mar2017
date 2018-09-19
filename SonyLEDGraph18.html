@@ -154,6 +154,13 @@ var n7 = {
   name:  'RRP - Hisense n7'
 };
 
+var x930d = {
+  x: [55, 65],
+  y: [4000, 6000],
+  type: 'scatter',
+    name:  'RRP - x930D'
+};
+	
 var x930e = {
   x: [55, 65],
   y: [4000, 5300],
@@ -276,9 +283,9 @@ var data17 = [x930e, x900e, vpx930e, jbx930e, sonyx930e, napf930e, blx900e, jbx9
 
 // subsets of data17 to allow view choice of x900e or x930e
 // if new datapoints added to data17, copy them here too.
-var data900e = [x930e, x900e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e, napf900e]; // 2017/18 plot
+var data900e = [x930d, x930e, x900e, blx900e, jbx900e, ggx900e, hnx900e, sonyx900e, napf900e]; // 2017/18 plot
 
-var data930e = [x930e, x900e, vpx930e, jbx930e, sonyx930e, napf930e]; // 2017/18 plot
+var data930e = [x930d, x930e, x900e, vpx930e, jbx930e, sonyx930e, napf930e]; // 2017/18 plot
 
 
 Plotly.newPlot('x900F', data18, layout2);
