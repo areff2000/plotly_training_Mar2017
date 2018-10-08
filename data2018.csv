@@ -59,3 +59,5 @@ store, date, brand, model, size, price, URL
 "Sony", "19.9.18", "sony", "x900f", 55, 2200, "https://store.sony.com.au/search?q=KD-x9000f"
 "Sony", "8.10.18", "sony", "x900f", 65, 3300, "https://store.sony.com.au/search?q=KD-x9000f"
 "Sony", "8.10.18", "sony", "x900f", 75, 6000, "https://store.sony.com.au/search?q=KD-x9000f"
+"HN", "8.1018", "sony", "x900f", 55, 2000, "same GG JB;https://www.harveynorman.com.au/tv-blu-ray-home-theatre/tvs/tvs/sony/4k+ultra+hd_ultra+high+definition/993-1050?dir=desc&order=price#toolbar-top"
+"HN", "8.10.18", "sony", "x900f", 65, 3000, "same GG JB;https://www.harveynorman.com.au/tv-blu-ray-home-theatre/tvs/tvs/sony/4k+ultra+hd_ultra+high+definition/993-1050?dir=desc&order=price#toolbar-top"
