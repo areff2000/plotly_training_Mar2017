@@ -65,3 +65,5 @@ store, date, brand, model, size, price, URL
 "Sony", "9.10.18", "sony", "x900f", 55, 2000, "https://store.sony.com.au/search?q=KD-x9000f"
 "Sony", "9.10.18", "sony", "x900f", 65, 3000, "https://store.sony.com.au/search?q=KD-x9000f"
 "Sony", "9.10.18", "sony", "x900f", 75, 5300, "https://store.sony.com.au/search?q=KD-x9000f"
+"VP", "16.10.18", "sony", "x900f", 65, 2600, "VP 20% off sale $3170 plus $55 post https://pages2.ebay.com.au/Buyer_coupons/podcast"
+"VP", "16.10.18", "sony", "x900f", 55, 1800, "VP 20% off sale $2175 plus $55 post https://pages2.ebay.com.au/Buyer_coupons/podcast"
